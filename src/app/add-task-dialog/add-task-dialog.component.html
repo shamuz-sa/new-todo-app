@@ -3,8 +3,9 @@
 <mat-dialog-content class="custom-dialog">
   <div class="mb-3">
     <label for="inputTitle" class="form-label">Titre</label>
-    <input type="text" class="form-control" id="inputTitle" placeholder="Entrez votre titre ici">
-  </div>
+    <input type="text" class="form-control" id="inputTitle" placeholder="Entrez votre titre ici ">
+    <!-- [ngModel]="task.title -->
+</div>
   <div class="mb-3">
     <label for="description" class="form-label">Description</label>
     <input type="text" class="form-control" id="description" placeholder="Description">
@@ -17,7 +18,12 @@
 
   <div class="mb-3">
     <label for="priority" class="form-label">Priorité</label>
-    <input type="text" class="form-control" id="priority" placeholder="Priorité">
+    <input type="number" class="form-control" id="priority" placeholder="Priorité">
+  </div>
+
+  <div class="mb-3">
+    <label for="categ" class="form-label">Categorie</label>
+    <input type="text" class="form-control" id="catge" placeholder="Categorie">
   </div>
 
 

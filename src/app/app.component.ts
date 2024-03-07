@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet, provideRouter } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,MatDialogModule],
+  imports: [RouterOutlet,MatDialogModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

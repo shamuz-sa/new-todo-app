@@ -10,7 +10,7 @@ import { AddTaskDialogComponent } from '../add-task-dialog/add-task-dialog.compo
   imports: [],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.css',
-  providers:[TodoService]
+  providers: [TodoService]
 })
 export class TodoComponent implements OnInit {
   [x: string]: any;
@@ -19,7 +19,7 @@ export class TodoComponent implements OnInit {
     this.getAllTask();
     // this.openAddTaskDialog()
   }
-  taskArr : Todo[] = [];
+  taskArr: Todo[] = [];
   constructor(
     private todoService: TodoService,
     private dialog: MatDialog) { }
@@ -83,28 +83,28 @@ export class TodoComponent implements OnInit {
   // ];
 
   getAllTask() {
-      // console.log("toto is call")
-      this.todoService.getAllTask().subscribe({
-        next: (data) => {
-          console.log(data)
-          this.taskArr = data;
-        },
-        error: (err) => {
-          console.error('Unable to get the list of tasks', err);
-        }
-      });
-    }
+    // console.log("toto is call")
+    this.todoService.getAllTask().subscribe({
+      next: (data) => {
+        console.log(data)
+        this.taskArr = data;
+      },
+      error: (err) => {
+        console.error('Unable to get the list of tasks', err);
+      }
+    });
+  }
 
 
-    openAddTaskDialog(): void {
-      const dialogRef = this.dialog.open(AddTaskDialogComponent, {
-        width: '800px', // Ajustez la largeur selon vos besoins
-        data: {} // Vous pouvez transmettre des données à votre boîte de dialogue si nécessaire
-      });
+  openAddTaskDialog(): void {
+    const dialogRef = this.dialog.open(AddTaskDialogComponent, {
+      width: '800px', // Ajustez la largeur selon vos besoins
+      data: {} // Vous pouvez transmettre des données à votre boîte de dialogue si nécessaire
+    });
 
-      dialogRef.afterClosed().subscribe(result => {
-        console.log('La boîte de dialogue est fermée', result);
-        // Ajoutez ici la logique pour traiter le résultat de la boîte de dialogue
-      });
-    }
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('La boîte de dialogue est fermée', result);
+      // Ajoutez ici la logique pour traiter le résultat de la boîte de dialogue
+    });
+  }
 }

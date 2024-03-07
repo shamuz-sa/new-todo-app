@@ -12,9 +12,9 @@ export class TodoService {
 
   constructor(private http: HttpClient) { }
 
-  // addTask(task: Task):Observable<Task>{
-  //   return this.http.post<Task>(this.serviceUrl, task);
-  // }
+  addTask(todo: Todo):Observable<Todo>{
+    return this.http.post<Todo>(this.serviceUrl, todo);
+  }
 
   getAllTask():Observable<Todo[]>{
     return this.http.get<Todo[]>(this.serviceUrl);
