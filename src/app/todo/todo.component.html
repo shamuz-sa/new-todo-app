@@ -1,55 +1,52 @@
 <!-- <p>todo works!</p> -->
+<br>
 <div class="container-fluid custom-background">
   <div class="container-fluid">
     <div class="container">
       <div class="row mt-4" style="height: 500px">
         <div class="col"></div>
-        <div class="col-md-6 bg-white shadow">
-          <div class="card bg-warning mt-4">
+        <div class="col-md-12 bg-white shadow">
+          <div class="card bg-success mt-4">
             <h4 class="text-white ps-3 pt-2 pb-2">To Do List</h4>
           </div>
           <div class="shadow custom-input-group">
             <div class="input-group mb-3 d-flex justify-content-center">
               <!-- <input type="text" class="form-control" placeholder="Enter task" name="task"> -->
-              <button class="btn btn-outline-success" #addTaskButton (click)="openAddTaskDialog()">+</button>
-
+              <button class="btn btn-outline-success" #addTaskButton (click)="openAddTaskDialog()">Ajouter une tache</button>
             </div>
           </div>
 
           <h4 class="text-primary mt-4">Tasks:</h4>
-          <div style="overflow-y: auto;">
-            <div class="m-3">
-              @for (task of taskArr; track $index) {
+          <div class="task-container d-flex flex-wrap justify-content-center">
 
-              <div class="task-card p-3 shadow">
-                <div class="row">
-                  <div class="col-md-10">
-                    <div class="card border-0">
-                      <div class="card-body">
-                        <h5 class="card-title">Title: {{ task.title }}</h5>
-                        <p class="card-text">Description: {{ task.description }}</p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <!-- <li class="list-group-item"><strong>Task ID:</strong> {{ task.task_id }}</li> -->
-                        <li class="list-group-item"><strong>Due Date:</strong> {{ task.due_date }}</li>
-                        <li class="list-group-item"><strong>Priority:</strong> {{ task.priority }}</li>
-                        <li class="list-group-item"><strong>Category:</strong> {{ task.category }}</li>
-                        <!-- Add other task properties here as needed -->
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-md-2 d-flex flex-column align-items-center justify-content-between">
-                    <button class="btn btn-outline-primary btn-block mb-2">Edit</button>
-                    <button class="btn btn-outline-danger btn-block">Delete</button>
+            @for (task of taskArr; track $index) {
+            <div class="col-md- mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Title: {{ task.title }}</h5>
+                  <p class="card-text">Description: {{ task.description }}</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Due Date:</strong> {{ task.due_date }}</li>
+                    <li class="list-group-item"><strong>Priority:</strong> {{ task.priority }}</li>
+                    <li class="list-group-item"><strong>Category:</strong> {{ task.category }}</li>
+                    <!-- Add other task properties here as needed -->
+                  </ul>
+                  <div class="d-flex justify-content-between mt-2">
+                    <button class="btn btn-outline-primary">Edit</button>
+                    <button class="btn btn-outline-danger">Delete</button>
                   </div>
                 </div>
               </div>
-
-              } @empty {
-              Task not found
-              }
-
             </div>
+            } @empty {
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Task not found</p>
+                </div>
+              </div>
+            </div>
+            }
           </div>
         </div>
         <div class="col"></div>
@@ -57,6 +54,3 @@
     </div>
   </div>
 </div>
-
-
-

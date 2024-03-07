@@ -1,0 +1,71 @@
+.custom-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+}
+
+.custom-input-group {
+  margin-top: 15px;
+}
+
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+}
+
+.task-card {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #22cc30;
+  box-shadow: 0 4px 8px rgba(47, 161, 114, 0.1);
+}
+
+.task-container .card {
+  border: 2px solid #22cc30;
+  box-shadow: 0 8px 15px rgba(22, 138, 90, 0.3);
+}
+
+.task-container .card:hover {
+  box-shadow: 0 12px 20px rgba(22, 138, 90, 0.5);
+}
+
+.card.bg-success {
+  text-align: center;
+}
+
+.card.bg-success h4 {
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+}
+
+.task-card .card-body {
+  padding: 10px;
+}
+
+.task-card h5.card-title,
+.task-card p.card-text {
+  margin-bottom: 10px;
+}
+
+.task-card ul.list-group {
+  margin-top: 10px;
+}
+
+.task-card .list-group-item {
+  border: none;
+  padding: 5px;
+}
+
+.task-card .d-flex.justify-content-between {
+  margin-top: 10px;
+}
+
+.task-card button.btn {
+  margin-right: 5px;
+}

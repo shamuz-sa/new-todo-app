@@ -98,7 +98,7 @@ export class TodoComponent implements OnInit {
 
     openAddTaskDialog(): void {
       const dialogRef = this.dialog.open(AddTaskDialogComponent, {
-        width: '300px', // Ajustez la largeur selon vos besoins
+        width: '800px', // Ajustez la largeur selon vos besoins
         data: {} // Vous pouvez transmettre des données à votre boîte de dialogue si nécessaire
       });
 

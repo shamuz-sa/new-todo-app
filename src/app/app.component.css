@@ -1,0 +1,13 @@
+ /* Ajout de styles personnalisés */
+ .navbar {
+  margin-bottom: 20px; /* Ajout d'une marge en bas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+}
+
+.navbar-brand {
+  font-weight: bold; /* Ajout d'un style de police plus gras */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px; /* Espacement entre les éléments du menu */
+}
